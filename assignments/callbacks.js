@@ -84,10 +84,19 @@ console.log(contains("bats", items, truth));
 
 ///////////////////////////////////////////////////////////////////////
 /* STRETCH PROBLEM */
+const arr = ["a", "b", "b", "a"];
 
-function removeDuplicates(array, cb) {
-  return cb(array);
+function removeDuplicates(array, callback) {
+  return callback(array);
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
 }
+
+removeDuplicates(arr, function(){
+  var arrUnique = arr.filter(function(item, index){
+    return arr.indexOf(item) >= index;
+  });
+  console.log(arrUnique);
+
+});
