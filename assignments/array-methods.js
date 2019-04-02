@@ -82,9 +82,7 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 // Every donation over 100 gets a free beer after the run.
-let freeBeer = runners.filter(element => {
-      return element.donation >= 100;
-});
+let freeBeer = runners.filter(element => {return element.donation >= 100;});
 console.log(freeBeer);
 
 // Problem 2
