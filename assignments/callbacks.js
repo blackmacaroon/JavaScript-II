@@ -2,7 +2,7 @@
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
-/* 
+
 
   //Given this problem: 
   
@@ -22,26 +22,37 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
     console.log(first)
   });
 
-*/
+
 
 
 function getLength(arr, cb) {
+  return cb(arr);
   // getLength passes the length of the array into the callback.
 }
+getLength(items, function(length){
+  console.log(items.length);
+});
 
 function last(arr, cb) {
+  return cb(arr);
   // last passes the last item of the array into the callback.
 }
+last(items, function(lastItem){
+  console.log(items.pop());
+});
 
 function sumNums(x, y, cb) {
+  return cb(x,y);
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
 
 function multiplyNums(x, y, cb) {
+  return cb(x,y);
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
 
 function contains(item, list, cb) {
+  return cb(item, list);
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
